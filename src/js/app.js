@@ -3,12 +3,6 @@ import Counter from "./counter/Counter";
 import HandlerAdder from "./HandlerAdder";
 // TODO: write code here
 
-export default function demo(value) {
-  return `Demo: ${value}`;
-}
-
-console.log("app.js included");
-
 document.addEventListener("DOMContentLoaded", () => {
   const fieldElem = document.createElement("ul");
   fieldElem.className = "game-field";
