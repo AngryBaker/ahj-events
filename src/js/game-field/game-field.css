@@ -1,0 +1,21 @@
+.game-field {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 609px;
+    max-width: 610px;
+    padding: 0;
+}
+
+.game-cell {
+    width: 150px;
+    height: 150px;
+    border: 1px solid red;
+}
+
+.goblin {
+    background-image: url(./goblin.png);
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 110px;
+}
