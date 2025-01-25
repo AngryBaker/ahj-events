@@ -1,4 +1,2 @@
 # Webpack5
-
-[Руководство по настройке Webpack](https://webpack.js.org/guides/)
-[Руководство по настройке GitHub Actions](https://docs.github.com/en/actions/quickstart)
+[![Build status](https://ci.appveyor.com/api/projects/status/c8805ry9dh7vrisp/branch/master?svg=true)](https://ci.appveyor.com/project/AngryBaker/ahj-events/branch/master)
