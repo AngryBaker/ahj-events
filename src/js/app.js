@@ -24,13 +24,30 @@ document.addEventListener("DOMContentLoaded", () => {
     newCell.appendChild(gameField.goblin);
   }, 1000);
 
-  console.log(jumpInterval);
-
   const counter = new Counter();
   counter.createCounterField();
-  counter.increment();
-  console.log(counter);
+  counter.createLooseCounterField();
 
   const handlerAdder = new HandlerAdder(counter);
-  handlerAdder.addHandler(gameField.goblin);
+  handlerAdder.addHandler(gameField.goblin, handlerAdder.goblinClickHandler);
+  handlerAdder.addHandler(fieldElem, handlerAdder.cellClickHandler);
+  handlerAdder.goodPunchFunc = function () {
+    let newCell = gameField.changePosition();
+    while (newCell === gameField.cellForGoblin) {
+      newCell = gameField.changePosition();
+    }
+    newCell.appendChild(gameField.goblin);
+  };
+
+  const looseCheker = function () {
+    if (counter.looseCount === 5) {
+      console.log("Potracheno");
+      clearInterval(jumpInterval);
+      // eslint-disable-next-line prettier/prettier
+      handlerAdder.deleteHandler(gameField.goblin, handlerAdder.goblinClickHandler);
+      handlerAdder.deleteHandler(fieldElem, handlerAdder.cellClickHandler);
+    }
+  };
+
+  handlerAdder.badPunchFunc = looseCheker;
 });

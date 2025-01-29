@@ -5,7 +5,7 @@ export default class GameField {
   goblin = null;
   cellForGoblin = null;
 
-  changePosition(){
+  changePosition() {
     const allCells = this._element.querySelectorAll(".game-cell");
     const newCellForGoblin =
       allCells[Math.floor(Math.random() * allCells.length)];

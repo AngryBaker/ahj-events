@@ -1,4 +1,11 @@
 .counter {
+    border: 1px solid green;
+    width: 100px;
+    font-size: 30px;
+    color: black;
+}
+
+.loose-counter {
     border: 1px solid red;
     width: 100px;
     font-size: 30px;
